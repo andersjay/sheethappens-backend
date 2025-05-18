@@ -12,4 +12,10 @@ class LocalController extends Controller
         $locais = Local::all();
         return response()->json($locais);
     }
+
+    public function allWithPoopCount()
+    {
+        $locals = \App\Models\Local::withCount('poopCounts')->get();
+        return response()->json($locals);
+    }
 } 

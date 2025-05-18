@@ -34,3 +34,5 @@ Route::get('/places', [
 ])->middleware('auth:sanctum');
 
 Route::get('/random-sentence', [\App\Http\Controllers\SentenceController::class, 'random']);
+
+Route::get('/locals-with-poop-count', [\App\Http\Controllers\LocalController::class, 'allWithPoopCount']);

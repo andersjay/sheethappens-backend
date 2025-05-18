@@ -10,4 +10,9 @@ class Local extends Model
         'name',
         'icon_name',
     ];
+
+    public function poopCounts()
+    {
+        return $this->hasMany(\App\Models\PoopCount::class, 'local_id');
+    }
 }
