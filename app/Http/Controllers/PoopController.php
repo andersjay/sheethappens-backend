@@ -11,10 +11,11 @@ class PoopController extends Controller
     public function incrementPoop(Request $request)
     {
         
-        $local_id = $request->input('local_id');
+        $local_id = $request->input('place_id');
         $user = $request->user();
         
         $local = Local::find($local_id);
+    
         if (!$local) {
             return response()->json(['message' => 'Local not found'], 404);
         }

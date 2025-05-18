@@ -32,3 +32,5 @@ Route::get('/get-poop-by-user/{user_id}', [
 Route::get('/places', [
     'uses' => 'App\Http\Controllers\LocalController@index',
 ])->middleware('auth:sanctum');
+
+Route::get('/random-sentence', [\App\Http\Controllers\SentenceController::class, 'random']);
