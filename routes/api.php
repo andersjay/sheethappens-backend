@@ -27,11 +27,11 @@ Route::get('/get-poop-by-local/{local_id}', [
 
 Route::get('/get-poop-by-user/{user_id}', [
     'uses' => 'App\Http\Controllers\PoopController@getPoopByUser',
-])->middleware('auth:sanctum');
+]);
 
 Route::get('/places', [
     'uses' => 'App\Http\Controllers\LocalController@index',
-])->middleware('auth:sanctum');
+]);
 
 Route::get('/random-sentence', [\App\Http\Controllers\SentenceController::class, 'random']);
 
